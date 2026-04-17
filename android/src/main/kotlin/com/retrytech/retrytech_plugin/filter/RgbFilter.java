@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.retrytech.retrytech_plugin.filter;
+package com.caribou.caribou_flutter_plugin.filter;
 
 import static androidx.media3.common.util.Assertions.checkState;
 

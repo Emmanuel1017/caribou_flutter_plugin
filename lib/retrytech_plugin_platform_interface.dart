@@ -1,27 +1,25 @@
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
-import 'retrytech_plugin_method_channel.dart';
+import 'caribou_flutter_plugin_method_channel.dart';
 
-abstract class RetrytechPluginPlatform extends PlatformInterface {
-  /// Constructs a RetrytechPluginPlatform.
-  RetrytechPluginPlatform() : super(token: _token);
+abstract class caribouPluginPlatform extends PlatformInterface {
+  /// Constructs a caribouPluginPlatform.
+  caribouPluginPlatform() : super(token: _token);
 
   static final Object _token = Object();
 
-  static RetrytechPluginPlatform _instance = MethodChannelRetrytechPlugin();
+  static caribouPluginPlatform _instance = MethodChannelcaribouPlugin();
 
-  /// The default instance of [RetrytechPluginPlatform] to use.
+  /// The default instance of [caribouPluginPlatform] to use.
   ///
-  /// Defaults to [MethodChannelRetrytechPlugin].
-  static RetrytechPluginPlatform get instance => _instance;
+  /// Defaults to [MethodChannelcaribouPlugin].
+  static caribouPluginPlatform get instance => _instance;
 
   /// Platform-specific implementations should set this with their own
-  /// platform-specific class that extends [RetrytechPluginPlatform] when
+  /// platform-specific class that extends [caribouPluginPlatform] when
   /// they register themselves.
-  static set instance(RetrytechPluginPlatform instance) {
+  static set instance(caribouPluginPlatform instance) {
     PlatformInterface.verifyToken(instance, _token);
     _instance = instance;
   }
-
-
 }

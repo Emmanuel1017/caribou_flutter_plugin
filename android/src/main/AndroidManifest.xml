@@ -1,4 +1,4 @@
-<manifest package="com.retrytech.retrytech_plugin"
+<manifest package="com.caribou.caribou_flutter_plugin"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />

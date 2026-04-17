@@ -1,4 +1,4 @@
-group = "com.retrytech.retrytech_plugin"
+group = "com.caribou.caribou_flutter_plugin"
 version = "1.0-SNAPSHOT"
 
 buildscript {
@@ -25,7 +25,7 @@ apply plugin: "com.android.library"
 apply plugin: "kotlin-android"
 
 android {
-    namespace = "com.retrytech.retrytech_plugin"
+    namespace = "com.caribou.caribou_flutter_plugin"
 
     compileSdk = 35
     buildFeatures.dataBinding = true

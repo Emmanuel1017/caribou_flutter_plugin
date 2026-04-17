@@ -2,18 +2,18 @@ import Flutter
 import UIKit
 import AVKit
 
-public class RetrytechPlugin: NSObject, FlutterPlugin {
+public class caribouPlugin: NSObject, FlutterPlugin {
 
     public static func register(with registrar: FlutterPluginRegistrar) {
-        let channel = FlutterMethodChannel(name: "retrytech_plugin", binaryMessenger: registrar.messenger())
-        let instance = RetrytechPlugin()
+        let channel = FlutterMethodChannel(name: "caribou_flutter_plugin", binaryMessenger: registrar.messenger())
+        let instance = caribouPlugin()
         registrar.addMethodCallDelegate(instance, channel: channel)
 
-        let cameraChannel = FlutterMethodChannel(name: "retrytech_camera", binaryMessenger: registrar.messenger())
+        let cameraChannel = FlutterMethodChannel(name: "caribou_camera", binaryMessenger: registrar.messenger())
         registrar.addMethodCallDelegate(instance, channel: cameraChannel)
 
         let cameraFactory = CameraViewFactory(messenger: registrar.messenger(), channel: cameraChannel)
-        registrar.register(cameraFactory, withId: "retrytech_camera_view")
+        registrar.register(cameraFactory, withId: "caribou_camera_view")
     }
 
 

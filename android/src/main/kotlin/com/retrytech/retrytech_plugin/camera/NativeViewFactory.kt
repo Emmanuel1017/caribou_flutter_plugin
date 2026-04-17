@@ -1,4 +1,4 @@
-package com.retrytech.retrytech_plugin.camera
+package com.caribou.caribou_flutter_plugin.camera
 
 import android.app.Activity
 import android.content.Context

@@ -1,6 +1,6 @@
 //
 //  CameraView.swift
-//  retrytech_plugin
+//  caribou_flutter_plugin
 //
 //  Created by Aniket Vaddoriya on 19/04/25.
 //

@@ -1,4 +1,4 @@
-name: retrytech_plugin
+name: caribou_flutter_plugin
 description: "A new Flutter plugin project."
 version: 0.0.1
 homepage:
@@ -35,10 +35,10 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.retrytech.retrytech_plugin
-        pluginClass: RetrytechPlugin
+        package: com.caribou.caribou_flutter_plugin
+        pluginClass: caribouPlugin
       ios:
-        pluginClass: RetrytechPlugin
+        pluginClass: caribouPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:

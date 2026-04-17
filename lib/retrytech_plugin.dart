@@ -3,10 +3,10 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class RetrytechPlugin {
-  static var shared = RetrytechPlugin();
-  final methodChannel = const MethodChannel('retrytech_plugin');
-  final cameraChannel = const MethodChannel('retrytech_camera');
+class caribouPlugin {
+  static var shared = caribouPlugin();
+  final methodChannel = const MethodChannel('caribou_flutter_plugin');
+  final cameraChannel = const MethodChannel('caribou_camera');
 
   Future<bool?> shareToInstagram(String command) {
     return methodChannel.invokeMethod("shareToInstagram", command);
@@ -62,7 +62,7 @@ class RetrytechPlugin {
     return methodChannel.invokeMethod("applyFilterToImage", {
       'input_path': inputPath,
       'filter_values': filterValues,
-      'output_path': outputPath
+      'output_path': outputPath,
     });
   }
 
@@ -84,33 +84,33 @@ class RetrytechPlugin {
     });
   }
 
-  Future<bool?> hasAudio({required String inputPath }) {
+  Future<bool?> hasAudio({required String inputPath}) {
     return methodChannel.invokeMethod('hasAudio', {'input_path': inputPath});
   }
 }
 
-extension RetrytechCameraPlugin on RetrytechPlugin {
+extension caribouCameraPlugin on caribouPlugin {
   Widget get cameraView {
-    return  Platform.isAndroid
+    return Platform.isAndroid
         ? AndroidView(
-      viewType: 'retrytech_camera_view',
-      layoutDirection: TextDirection.ltr,
-      creationParams: {},
-      creationParamsCodec: StandardMessageCodec(),
-    )
+          viewType: 'caribou_camera_view',
+          layoutDirection: TextDirection.ltr,
+          creationParams: {},
+          creationParamsCodec: StandardMessageCodec(),
+        )
         : UiKitView(
-      viewType: 'retrytech_camera_view',
-      layoutDirection: TextDirection.ltr,
-      creationParams: {},
-      creationParamsCodec: StandardMessageCodec(),
-    );
+          viewType: 'caribou_camera_view',
+          layoutDirection: TextDirection.ltr,
+          creationParams: {},
+          creationParamsCodec: StandardMessageCodec(),
+        );
   }
 
   Future<void> initCamera() async {
     await cameraChannel.invokeMethod('init');
   }
 
-  Future<void>  get startRecording async {
+  Future<void> get startRecording async {
     await cameraChannel.invokeMethod('start');
   }
 
@@ -118,7 +118,7 @@ extension RetrytechCameraPlugin on RetrytechPlugin {
     await cameraChannel.invokeMethod('pause');
   }
 
-  Future<void>  get resumeRecording async {
+  Future<void> get resumeRecording async {
     await cameraChannel.invokeMethod('resume');
   }
 
@@ -129,6 +129,7 @@ extension RetrytechCameraPlugin on RetrytechPlugin {
   Future<bool> get disposeCamera async {
     return await cameraChannel.invokeMethod('dispose');
   }
+
   Future<void> get toggleCamera async {
     await cameraChannel.invokeMethod('toggle');
   }
@@ -137,7 +138,7 @@ extension RetrytechCameraPlugin on RetrytechPlugin {
     await cameraChannel.invokeMethod('flash');
   }
 
-  Future<String?>  captureImage() async {
+  Future<String?> captureImage() async {
     return await cameraChannel.invokeMethod('capture_image');
   }
 }

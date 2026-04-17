@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.retrytech.retrytech_plugin.camera.AutoFitTextureView
+        <com.caribou.caribou_flutter_plugin.camera.AutoFitTextureView
             android:id="@+id/viewFinder"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />

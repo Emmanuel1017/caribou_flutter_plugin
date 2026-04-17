@@ -1,4 +1,4 @@
-package com.retrytech.retrytech_plugin
+package com.caribou.caribou_flutter_plugin
 
 import android.Manifest
 import android.app.Activity
@@ -37,8 +37,8 @@ import androidx.media3.transformer.Effects
 import androidx.media3.transformer.ExportException
 import androidx.media3.transformer.ExportResult
 import androidx.media3.transformer.Transformer
-import com.retrytech.retrytech_plugin.camera.NativeViewFactory
-import com.retrytech.retrytech_plugin.filter.RgbFilter
+import com.caribou.caribou_flutter_plugin.camera.NativeViewFactory
+import com.caribou.caribou_flutter_plugin.filter.RgbFilter
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.embedding.engine.plugins.activity.ActivityAware
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding
@@ -51,8 +51,8 @@ import java.io.FileOutputStream
 import java.nio.ByteBuffer
 
 
-/** RetrytechPlugin */
-open class RetrytechPlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
+/** caribouPlugin */
+open class caribouPlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
     /// The MethodChannel that will the communication between Flutter and native Android
     ///
     /// This local reference serves to register the plugin with the Flutter Engine and unregister it
@@ -63,14 +63,14 @@ open class RetrytechPlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
     override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
         channel = MethodChannel(
             flutterPluginBinding.binaryMessenger,
-            "retrytech_plugin"
+            "caribou_flutter_plugin"
         )
         channel.setMethodCallHandler(this)
 
-        cameraChannel = MethodChannel(flutterPluginBinding.binaryMessenger, "retrytech_camera")
+        cameraChannel = MethodChannel(flutterPluginBinding.binaryMessenger, "caribou_camera")
         cameraChannel.setMethodCallHandler(this)
         flutterPluginBinding.platformViewRegistry.registerViewFactory(
-            "retrytech_camera_view",
+            "caribou_camera_view",
             NativeViewFactory(cameraChannel)
         )
     }

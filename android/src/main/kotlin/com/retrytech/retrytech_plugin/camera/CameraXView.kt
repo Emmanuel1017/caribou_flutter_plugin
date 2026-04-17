@@ -1,4 +1,4 @@
-package com.retrytech.retrytech_plugin.camera
+package com.caribou.caribou_flutter_plugin.camera
 
 import android.Manifest.permission.CAMERA
 import android.annotation.SuppressLint
@@ -37,7 +37,7 @@ import androidx.core.content.PermissionChecker
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.LifecycleOwner
-import com.retrytech.retrytech_plugin.R
+import com.caribou.caribou_flutter_plugin.R
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.platform.PlatformView
