@@ -36,9 +36,9 @@ flutter:
     platforms:
       android:
         package: com.caribou.caribou_flutter_plugin
-        pluginClass: caribouPlugin
+        pluginClass: CaribouPlugin
       ios:
-        pluginClass: caribouPlugin
+        pluginClass: CaribouPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:
