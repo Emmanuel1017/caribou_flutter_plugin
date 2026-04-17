@@ -2,11 +2,11 @@ import Flutter
 import UIKit
 import AVKit
 
-public class caribouPlugin: NSObject, FlutterPlugin {
+public class CaribouPlugin: NSObject, FlutterPlugin {
 
     public static func register(with registrar: FlutterPluginRegistrar) {
         let channel = FlutterMethodChannel(name: "caribou_flutter_plugin", binaryMessenger: registrar.messenger())
-        let instance = caribouPlugin()
+        let instance = CaribouPlugin()
         registrar.addMethodCallDelegate(instance, channel: channel)
 
         let cameraChannel = FlutterMethodChannel(name: "caribou_camera", binaryMessenger: registrar.messenger())

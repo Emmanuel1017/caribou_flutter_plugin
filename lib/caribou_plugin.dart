@@ -3,8 +3,8 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class caribouPlugin {
-  static var shared = caribouPlugin();
+class CaribouPlugin {
+  static var shared = CaribouPlugin();
   final methodChannel = const MethodChannel('caribou_flutter_plugin');
   final cameraChannel = const MethodChannel('caribou_camera');
 
@@ -89,7 +89,7 @@ class caribouPlugin {
   }
 }
 
-extension caribouCameraPlugin on caribouPlugin {
+extension caribouCameraPlugin on CaribouPlugin {
   Widget get cameraView {
     return Platform.isAndroid
         ? AndroidView(
