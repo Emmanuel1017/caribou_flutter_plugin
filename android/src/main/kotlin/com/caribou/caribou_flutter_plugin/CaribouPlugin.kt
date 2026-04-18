@@ -530,7 +530,7 @@ open class CaribouPlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
         }
         val composition = Composition.Builder(mediaItemSequences).build()
         val transformer = Transformer.Builder(context!!)
-            .setMuxerFactory(DefaultMuxer.Factory())
+            // .setMuxerFactory(DefaultMuxer.Factory())
             .setPortraitEncodingEnabled(true)
             .addListener(object : Transformer.Listener {
                 override fun onError(
